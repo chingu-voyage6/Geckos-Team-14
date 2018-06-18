@@ -11,10 +11,10 @@ This git work flow is based on the wonderful Medium guides on how to not f- up y
 #### Master Branch
 This is the production branch and code will only be pushed to this branch once it has been tested and reviewed.
 
-#### Dev Branch
+#### Development Branch
 This is the primary development branch. All pull requests will be sent to this branch where they will be reviewed before being merged.
 
-In order to start working you will clone the repo  `https://github.com/chingu-voyage4/Geckos-Team-0.git`.
+In order to start working you will clone the repo  `https://github.com/chingu-voyage6/Geckos-Team-14.git`.
 The dev branch has been set to the default so you should have to switch to the dev branch. But if you do you can use type `$ git checkout dev`.
 
 All coding should be done on individual branches. Type `$ git checkout -b myNewBranch` to create a new branch. Typing `git branch` will confirm that you have been successfully switched to your working branch.
