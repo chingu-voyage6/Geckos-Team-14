@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Header extends Component {
   render() {
     return(
-      <h1>NPMInstallBeer</h1>
+      <h1 className="text-center">NPMInstallBeer</h1>
     );
   }
 }

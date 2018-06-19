@@ -9,10 +9,12 @@ class App extends Component {
     return (
       <div>
         <Header />
-          <div className="grid-x grid-margin-x">
-            <BeerCard />
-            <div className="cell small-2 plus-sign">+</div>
-            <NPMCard />
+          <div className="grid-container">
+            <div className="grid-x grid-padding-x">
+              <BeerCard />
+              <div className="cell small-2"><p className="plus-sign">+</p></div>
+              <NPMCard />
+           </div>
           </div>
             <Terminal />
       </div>
