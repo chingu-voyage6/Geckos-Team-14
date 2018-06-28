@@ -1,7 +1,19 @@
-.terminal__body {
+.terminal__container {
   background-color: black;
   color: white;
   height: 300px;
+  padding: 20px;
+}
+
+.history {
+  color: white;
+}
+
+.input {
+  display: inline-block;
+  height: 1em;
+  min-width: 1em;
+  outline-color: transparent;
 }
 
 .beer-card__img {
