@@ -5,11 +5,27 @@ class Terminal extends Component {
     super(props);
     this.processCommand = this.processCommand.bind(this);
     this.hello = this.hello.bind(this);
+    this.resetInput = this.resetInput.bind(this);
     this.state = {
       history: []
     }
 
   }
+  /**
+   * 
+   * @param {*} terminal 
+   * @param {*} input 
+   */
+  resetInput(terminal, input) {
+    let newInput = input.parentNode.cloneNode(true);
+    input.setAttribute("contenteditable", false);
+  
+    terminal.appendChild(newInput);
+    newInput.querySelector(".input").innerHTML = " ";
+    newInput.querySelector(".input").focus();
+  }
+
+
   /**
    * @function processCommand
    * @param {event} onKeyDown
@@ -38,8 +54,8 @@ class Terminal extends Component {
     const terminal = document.querySelector(".history");
     terminal.textContent = "Hello user!";
     console.log(`Hello user!`);
+    this.resetInput(document.getElementById('terminal'), document.querySelector(".input"));
   }
-
   render() {
     return(
       <section className="grid-y terminal__container">
