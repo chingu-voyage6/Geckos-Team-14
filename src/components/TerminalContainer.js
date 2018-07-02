@@ -1,7 +1,30 @@
 import React, { Component } from 'react';
 import Terminal from 'react-bash';
+const history = [
+  { value: 'Welcome to NPMInstallBeer!'},
+  { value: 'Type \'help\' to begin.'}
+]
+export const hello = {
+    exec: (state, {args}) => { 
+      let value = '';
+      if (args[0] != undefined) {
+        const name = args[0];
+        value = `Hello ${name}!`;
+      }
+      else { 
+        value = 'Hello Visitor!';
+      }
+      return Object.assign({}, state, {
+        history: state.history.concat({value})
+        });
+    }
+};
+
+const extensions = { hello };
+
 
 class TerminalContainer extends Component {
+  
   render() {
     return(
       <div className="terminal__container">
@@ -28,6 +51,8 @@ class TerminalContainer extends Component {
           }} 
           prefix={'beerlover@root'} 
           theme={Terminal.Themes.DARK}
+          history={history}
+          extensions = {extensions}
         />
       </div>
     );
