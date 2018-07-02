@@ -1,21 +1,13 @@
+
 .terminal__container {
   background-color: black;
-  color: white;
-  height: 300px;
-  padding: 20px;
+  width: 90%;
+  margin: 0 5%;
 }
 
-.history {
-  color: white;
-}
-
-.input {
-  display: inline-block;
-  height: 1em;
-  min-width: 1em;
+input {
   outline-color: transparent;
 }
-
 .beer-card__img {
   height: 200px;
   width: 150px;
