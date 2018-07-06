@@ -5,6 +5,7 @@
   "dependencies": {
     "foundation-sites": "^6.4.4-rc1",
     "react": "^16.4.1",
+    "react-bash": "^1.6.0",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
   },

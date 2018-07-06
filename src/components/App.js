@@ -3,7 +3,8 @@ import './App.css';
 import Header from './Header';
 import BeerCard from './BeerCard';
 import NPMCard from './NPMCard';
-import Terminal from './Terminal';
+
+import TerminalContainer from './TerminalContainer';
 class App extends Component {
   render() {
     return (
@@ -16,7 +17,7 @@ class App extends Component {
               <NPMCard />
            </div>
           </div>
-            <Terminal />
+            <TerminalContainer />
       </div>
     );
   }
