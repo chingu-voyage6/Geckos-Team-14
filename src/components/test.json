@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "tech": {
+      "name": "Node",
+      "link": "https://nodejs.org/en/",
+      "desc": "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine."
+    },
+    "beer": {
+      "name": "Dragons Milk",
+      "brewery": "New Holland",
+      "location": "417 Bridge Street NW Grand Rapids, Michigan 49504",
+      "latitude": "42.9707057",
+      "longitude": "-85.6819933",
+      "breweryStyle": "Craft Brewery",
+      "phone": "1-616-345-5642",
+      "website": "http://newhollandbrew.com/theknickerbocker/"
+    } 
+
+  }
+]
