@@ -4,6 +4,20 @@ const history = [
   { value: 'Welcome to NPMInstallBeer!'},
   { value: 'Type \'help\' to begin.'}
 ]
+let data = {};
+
+function requestData(tech) {
+  console.log(tech);
+  fetch('http://www.mocky.io/v2/5b43c2972f000075005834d5')
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(myJson) {
+      data = myJson;
+      console.log(data);
+    });
+}
+
 export const hello = {
     exec: (state, {args}) => { 
       let value = '';
@@ -20,11 +34,26 @@ export const hello = {
     }
 };
 
-const extensions = { hello };
+export const pull = {
+  exec: (state, {args}) => {
+    const tech = args[0];
+    requestData(tech);
+    return Object.assign({}, state, {
+      history:state.history.concat({tech})
+    });
+  }
+};
+
+const extensions = { hello, pull };
 
 
 class TerminalContainer extends Component {
-  
+  constructor(props) {
+    super(props);
+  }
+  componentDidUpdate() {
+    this.props.updateBeerData(data); 
+  }
   render() {
     return(
       <div className="terminal__container">
